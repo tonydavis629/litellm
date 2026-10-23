@@ -121,10 +121,7 @@ mod tests {
     };
 
     fn client() -> OcrClient {
-        OcrClient::for_test(
-            litellm_http::Client::plain_for_test(),
-            litellm_http::Client::no_redirect_for_test(),
-        )
+        OcrClient::for_test()
         .with_secrets(litellm_inference_testing::no_secrets())
     }
 
